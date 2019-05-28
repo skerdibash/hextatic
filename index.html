@@ -1,0 +1,187 @@
+<html>
+	<head>
+		<title>HEXTATIC</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="scripts/stage0.js"></script>
+		<script type="text/javascript" src="scripts/stage1.js"></script>
+		<script type="text/javascript" src="scripts/stage2.js"></script>
+		<script type="text/javascript" src="scripts/stage3.js"></script>
+		<script type="text/javascript" src="scripts/stage4.js"></script>
+		<script type="text/javascript" src="scripts/stage5.js"></script>
+		<script type="text/javascript" src="scripts/stage6.js"></script>
+		<script type="text/javascript" src="scripts/stages.js"></script>
+		<script type="text/javascript" src="scripts/colors.js"></script>
+		<script type="text/javascript" src="scripts/hexgrid.js"></script>
+		<script type="text/javascript" src="scripts/queue.js"></script>
+		<script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="scripts/d3.min.js"></script>
+		<script type="text/javascript" src="scripts/d3-hexbin.min.js"></script>
+		<script type="text/javascript" src="scripts/game.js"></script>
+		<link rel="stylesheet" href="styles/main.css" type="text/css">
+		<link id="favicon" rel="icon" href="icons/hextatic.png" type="image/png" sizes="16x16">
+	</head>
+	<body>
+		<div id="mainbox">
+			<div id="optionsbox-pregame">
+				<div class="separated">
+					<div class="options">
+					</div>
+					<div class="other-options">
+						<svg class="back" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 8V4l8 8-8 8v-4H4V8z"/>
+							<path d="M0 0h24v24H0z" fill="none"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div id="optionsbox">
+				<div class="separated">
+					<div class="options">
+						<svg class="refresh" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
+							<path d="M0 0h24v24H0z" fill="none"/>
+						</svg>
+					</div>
+					<div class="map-number">
+					</div>
+					<div class="other-options">
+						<svg class="back" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 8V4l8 8-8 8v-4H4V8z"/>
+							<path d="M0 0h24v24H0z" fill="none"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="centered">
+				<div id="playbox">
+					<div id="playbutton-box">
+						<svg id="playbutton" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+							<path id=playbutton-inner d="M8 5v14l11-7z"/>
+							<path d="M0 0h24v24H0z" fill="none"/>
+						</svg>
+					</div>
+					<div id="playtext">
+						PLAY<br/>
+						HEXTATIC
+					</div>
+				</div>
+				<div id="gamebox">
+				</div>
+				<div id="selectbox">
+					<div id=selectgrid>
+						<div class=selectgrid-row>
+							<div id="0" class="rectbox">
+								<div class="numberbox">0</div>
+							</div>
+							<div id="1" class="rectbox">
+								<div class="numberbox">1</div>
+							</div>
+							<div id="2" class="rectbox">
+								<div class="numberbox">2</div>
+							</div>
+							<div id="3" class="rectbox">
+								<div class="numberbox">3</div>
+							</div>
+							<div id="4" class="rectbox">
+								<div class="numberbox">4</div>
+							</div>
+						</div>
+						<div class=selectgrid-row>
+							<div id="5" class="rectbox">
+								<div class="numberbox">5</div>
+							</div>
+							<div id="6" class="rectbox">
+								<div class="numberbox">6</div>
+							</div>
+							<div id="7" class="rectbox">
+								<div class="numberbox">7</div>
+							</div>
+							<div id="8" class="rectbox">
+								<div class="numberbox">8</div>
+							</div>
+							<div id="9" class="rectbox">
+								<div class="numberbox">9</div>
+							</div>
+						</div>
+						<div class=selectgrid-row>
+							<div id="10" class="rectbox">
+								<div class="numberbox">10</div>
+							</div>
+							<div id="11" class="rectbox">
+								<div class="numberbox">11</div>
+							</div>
+							<div id="12" class="rectbox">
+								<div class="numberbox">12</div>
+							</div>
+							<div id="13" class="rectbox">
+								<div class="numberbox">13</div>
+							</div>
+							<div id="14" class="rectbox">
+								<div class="numberbox">14</div>
+							</div>
+						</div>
+						<div class=selectgrid-row>
+							<div id="15" class="rectbox">
+								<div class="numberbox">15</div>
+							</div>
+							<div id="16" class="rectbox">
+								<div class="numberbox">16</div>
+							</div>
+							<div id="17" class="rectbox">
+								<div class="numberbox">17</div>
+							</div>
+							<div id="18" class="rectbox">
+								<div class="numberbox">18</div>
+							</div>
+							<div id="19" class="rectbox">
+								<div class="numberbox">19</div>
+							</div>
+						</div>
+						<div class=selectgrid-row>
+							<div id="20" class="rectbox">
+								<div class="numberbox">20</div>
+							</div>
+							<div id="21" class="rectbox">
+								<div class="numberbox">21</div>
+							</div>
+							<div id="22" class="rectbox">
+								<div class="numberbox">22</div>
+							</div>
+							<div id="23" class="rectbox">
+								<div class="numberbox">23</div>
+							</div>
+							<div id="24" class="rectbox">
+								<div class="numberbox">24</div>
+							</div>
+						</div>
+					</div>
+					<div id="changebox-first">
+						<svg class="forward" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 8V4l8 8-8 8v-4H4V8z"/>
+							<path d="M0 0h24v24H0z" fill="none"/>
+						</svg>
+					</div>
+					<div id="changebox">
+						<div class="separated">
+							<svg class="back" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12 8V4l8 8-8 8v-4H4V8z"/>
+								<path d="M0 0h24v24H0z" fill="none"/>
+							</svg>
+							<svg class="forward" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12 8V4l8 8-8 8v-4H4V8z"/>
+								<path d="M0 0h24v24H0z" fill="none"/>
+							</svg>
+						</div>
+					</div>
+					<div id="changebox-last">
+						<svg class="back" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 8V4l8 8-8 8v-4H4V8z"/>
+							<path d="M0 0h24v24H0z" fill="none"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

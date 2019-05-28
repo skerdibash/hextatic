@@ -1,0 +1,186 @@
+@font-face {
+    font-family: Stalinist;
+    src:url("../fonts/Stalinist_One/StalinistOne-Regular.ttf") format("truetype");
+}
+
+body {
+	margin: 0px;
+	overflow: hidden;
+	background-color: white;
+}
+
+#optionsbox-pregame {
+	display: none;
+}
+
+#optionsbox {
+	display: none;
+}
+
+#gamebox {
+	display: none;
+}
+
+#selectbox {
+	display: none;
+}
+
+#changebox-first {
+	display: none;
+}
+
+#changebox {
+	display: none;
+}
+
+#changebox-last {
+	display: none;
+}
+
+.centered {
+	height: 85%;
+    display: flex;
+    align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#playbutton-box {
+	text-align: center;
+	margin-right: 10%;
+}
+
+#playbutton {
+	height: 140px;
+	width: 140px;
+}
+
+#playbutton-inner {
+	cursor: pointer;
+	fill: #ab2828;
+}
+
+#playtext {
+	font-family: Stalinist;
+	font-size: 20px;
+	color: black;
+	text-align: center;
+}
+
+#choosetext {
+	font-family: Stalinist;
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.separated {
+    display: flex;
+    justify-content: space-between;
+}
+
+.map-number {
+	font-family: Stalinist;
+	font-size: 30px;
+	color: #ab2828;
+}
+
+.refresh, .back, .forward {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+	fill: #ab2828;
+}
+
+.back {
+	transform: scaleX(-1);
+}
+
+#selectgrid {
+    height: 320px;
+    width: 320px;
+}
+
+.selectgrid-row {
+    height: 60;
+}
+
+.rectbox {
+    float: left;
+    margin-left: 20px;
+	margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.numberbox {
+	font-size: 12px;
+    font-family: Stalinist;
+    color: white;
+}
+
+.done {
+    background-color: #e8e8e8;  
+}
+
+.done .numberbox {
+    color: black;
+}
+
+.tobe-done0 {
+    background-color: #ab2828;
+}
+
+.tobe-done1 {
+    background-color: #378aff;
+}
+
+.tobe-done2 {
+    background-color: #f6e000;
+}
+
+.tobe-done3 {
+    background-color: #16f300;
+}
+
+.tobe-done4 {
+    background-color: #ff6e22;
+}
+
+.tobe-done5 {
+    background-color: #8cc2bf;
+}
+
+.tobe-done6 {
+    background-color: #d23ae5;
+}
+
+.done, .tobe-done {
+	cursor: pointer;
+	transition: transform 200ms ease-in;
+}
+
+.done:hover, .tobe-done:hover {
+    transform: scale(1.3);
+}
+
+#changebox {
+	width: 90%;
+	margin-left: 5%;
+}
+
+#changebox-first {
+	float: right;
+	margin-right: 5%;
+}
+
+#changebox-last {
+	margin-left: 5%;
+}
